@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../App.css';
 const AddQuestion = () => {
-    const [options, setOptions] = useState(['ewf','fnle','fne','gnkrj']);
+    const [options, setOptions] = useState(['jglr','gr','ejk','lgr']);
     const [list, setList] = useState([]);
 
     const handleOptionChange = (index, value) => {
@@ -14,9 +14,9 @@ const AddQuestion = () => {
     //     setOptions([...options, '']);
     // };
 
-    const [question, setQuestion] = useState('fnelk');
+    const [question, setQuestion] = useState('gldfg');
 
-    const [answer, setAnswer] = useState('fmkel');
+    const [answer, setAnswer] = useState('3');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -29,7 +29,7 @@ const AddQuestion = () => {
             answer: answer
         };
         setList([...list, data]);
-
+        console.log(data);
         fetch('http://localhost:1337/api/questions', {
             method: 'POST',
             headers: {
